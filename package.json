@@ -10,35 +10,36 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:testmrsc.helloWorld"
+        "onCommand:testmrsc.pull_strapi",
+		"onCommand:testmrsc.publish_strapi"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 		{
-            "command": "testmrsc.helloWorld",
-            "title": "Hello World",
+            "command": "testmrsc.pull_strapi",
+            "title": "pull",
 			"icon": {
-				"light": "./images/markdownicon.PNG",
-				"dark": "./images/playicon.PNG"
+				"light": "./images/light/download.png",
+				"dark": "./images/dark/download.png"
 			}
 		},
 		{
-            "command": "testmrsc.helloVSC",
-            "title": "hellovsc",
+            "command": "testmrsc.publish_strapi",
+            "title": "publish",
 			"icon": {
-				"light": "./images/playicon.PNG",
-				"dark": "./images/markdownicon.PNG"
+				"light": "./images/light/upload.png",
+				"dark": "./images/dark/upload.png"
 			}
 		}],
 		"menus": {
 			"editor/title": [
 			  {
-				"command": "testmrsc.helloWorld",
+				"command": "testmrsc.pull_strapi",
 				"group": "navigation"
 			  },
 			  {
-				"command": "testmrsc.helloVSC",
+				"command": "testmrsc.publish_strapi",
 				"group": "navigation"
 			  }
 			]

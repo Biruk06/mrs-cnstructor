@@ -14,26 +14,17 @@ function activate(context) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "testmrsc" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('testmrsc.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World');	
+	let disposable = vscode.commands.registerCommand('testmrsc.pull_strapi', function () {
+		vscode.window.showInformationMessage('pull from Strapi');	
 	});
 	
-	let disposable2 = vscode.commands.registerCommand('testmrsc.helloVSC', function () {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello VSC');
+	let disposable2 = vscode.commands.registerCommand('testmrsc.publish_strapi', function () {
+		vscode.window.showInformationMessage('publish on Strapi');
 	})
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable, disposable2);
 }
 
-// this method is called when your extension is deactivated
+
 function deactivate() {}
 
 module.exports = {
