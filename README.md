@@ -3,6 +3,7 @@
 
 Step to test:
 - open folder in Visul Studio Code
+- Run `npm install` in terminal to install dependencies
 - run in a new Extension Development Host window  `f5`
 
 buttons:
